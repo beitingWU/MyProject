@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="partybuilding" extends="struts-default">
+
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>  
+        
+        <!-- 首页展示 -->
+        <action name="index" class="IndexAction" method="index">
+            <result name="success">/qiantai/zhuye.jsp</result>
+        </action>
+        
+        <!-- 公告管理 -->          
+        <action name="noticeFenye" class="NoticeAction" method="noticeFenye">
+            <result>/admin/notice/noticeFenye.jsp</result>
+        </action>   
+        <action name="noticeAdd" class="NoticeAction" method="noticeAdd">
+            <result name="succeed" type="chain">noticeFenye</result>          
+        </action>
+        <action name="noticeDel" class="NoticeAction" method="noticeDel">
+              <result name="succeed" type="chain">noticeFenye</result>
+        </action>
+        <action name="noticeDetail" class="NoticeAction" method="noticeDetail">
+            <result>/admin/notice/noticeDetail.jsp</result>
+        </action>
+        <action name="noticeDetailQian" class="NoticeAction" method="noticeDetail">
+            <result>/qiantai/notice/noticeDetailQian.jsp</result>
+        </action>
+         <action name="noticeQian5" class="NoticeAction" method="noticeQian5">
+            <result>/qiantai/notice/noticeQian5.jsp</result>
+        </action>  
+       
+        <!-- 显示风采 -->
+        <action name="memberstyleShow" class="MemberstyleAction" method="memberstyleShow">
+            <result name="succeed">/admin/memberstyle/memberstyleShow.jsp</result>
+        </action>
+        <action name="memberstyleMerge" class="MemberstyleAction" method="memberstyleMerge">
+            <result name="succeed" type="chain">memberstyleShow</result>
+        </action>
+        <action name="memberstyleDetail" class="MemberstyleAction" method="memberstyleDetail">
+            <result>/qiantai/memberstyle/memberstyleDetail.jsp</result>
+        </action>
+        <action name="memberstyleOne" class="MemberstyleAction" method="memberstyleDetail">
+            <result>/admin/memberstyle/memberstyleUpdate.jsp</result>
+        </action>
+        <action name="memberstyleAdd" class="MemberstyleAction" method="memberstyleAdd">
+              <result name="succeed" type="chain">memberstyleShow</result>
+        </action>
+        <action name="memberstyleDel" class="MemberstyleAction" method="memberstyleDel">
+              <result name="succeed" type="chain">memberstyleShow</result>
+        </action>               
+      
+    </package>
+</struts>

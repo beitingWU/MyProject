@@ -1,0 +1,16 @@
+/*活跃度排行*/
+
+.djgz_title{ padding:30px 0; text-align:center;}
+.hydzb,.hyzj,.hydy{width:100%; }
+.hydzb_font{ width:100%; height:235px;}
+.hydzb_list{ width:485px; height:175px; padding:30px; background-color:#fff8dc; float:left;}
+.hydzb_list li{ width:485px; height:28px; line-height:28px; margin-bottom:10px;}
+.hydzb_list li b{ width:25px; height:25px; line-height:25px; text-align:center; font-size:14px; color:#FFF; background-color:#909090; display:block; float:left; margin-right:25px;}
+.hydzb_list li a{ height:28px; line-height:28px; font-size:16px; float:left; color:#404040;}
+.hydzb_list li a:hover{ color:#cb0101;}
+.hydzb_list li h2{ height:28px; line-height:28px; font-size:16px; color:#404040; text-align:right; float:right;}
+.hycsq,.hybm{width:100%; height:450px; background-color:#f0f0f0;}
+
+.hydy_piclist{ width:100%; height:300px;}
+.hydy_piclist img{border:1px solid #CCC;}
+.hydy_piclist a{width:192px; height:238px;  line-height:50px; font-size:16px; color:#404040; padding-right:60px; text-align:center; float:left;}
